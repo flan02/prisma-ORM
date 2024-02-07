@@ -1,0 +1,15 @@
+{
+  "name": "prisma-orm",
+  "version": "1.0.0",
+  "description": "All about Prisma.We will use javascript at start but then we will use typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prisma": "^5.9.1"
+  }
+}
