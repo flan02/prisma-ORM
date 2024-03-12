@@ -52,7 +52,7 @@ async function listed() {
   });
 }
 
-//TODO listed();
+listed();
 
 async function findFirst() {
   const user = await db.user.findFirst({
