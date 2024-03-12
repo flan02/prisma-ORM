@@ -16,6 +16,21 @@ async function main() {
       },
     },
   });
+
+  // * Creamos el posteo por separado con una nueva consulta
+  /*
+  const newPost = await db.post.create({
+    data: {
+      title: "Hello, World!",
+      content: "This is my first post.",
+      author: {
+        connect: {
+          id: newUser.id,
+        },
+      },
+    },
+  });
+*/
   console.log(newUser);
 }
 
@@ -77,4 +92,29 @@ async function update() {
   });
 }
 
-update();
+//TODO update();
+
+async function upsert() {
+  const user = await db.user.upsert({
+    where: {
+      //? condición de búsqueda
+      id: 22,
+    },
+    create: {
+      //? si no existe, se crea
+      name: "John Doe",
+      password: "aixakuki01?",
+      email: "johndoe@gmail.com",
+    },
+    update: {
+      //? si existe, se actualiza
+      name: "Average Joe",
+    },
+  });
+  console.log(user);
+}
+
+//TODO upsert();
+
+db.$disconnect();
+////////////////////////// * FIN DE OPERACIONES CRUD ///////////////////////////////////

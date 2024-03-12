@@ -21,3 +21,7 @@ Prisma lo utilizamos en desarrollo. @npm install prisma -D
 npx prisma init -> Inicializa prisma en el proyecto (Pero con POSTGRESSQL)
 
 Para SQLite -> npx prisma init --datasource-provider sqlite
+
+Para crear las tablas con las relaciones -> npx prisma migrate dev --name "somename"
+
+Abrimos prismastudio -> npx prisma studio. Por defecto en el puerto 5555
